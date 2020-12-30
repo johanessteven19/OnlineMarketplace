@@ -20,7 +20,7 @@ def landingpage(request):
             'SELECT T.theme_name, E.name,E.organizer_email,L.venue_name,L.address,L.city,E.start_date,E.end_date,E.end_time,E.start_time,E.end_time,E.total_capacity '
             'FROM event.EVENT E, event.LOCATION L, event.EVENT_LOCATION EL, event.THEME T '
             'WHERE T.event_id = E.event_id AND L.code= EL.location_code AND EL.id_event = E.event_id '
-            'LIMIT %(last_page)s OFFSET %(first_page)s', {'first_page': (page - 1) * 5, 'last_page': page * 5})
+            'LIMIT %(pages)s OFFSET %(first_page)s', {'first_page': (page - 1) * 5, 'pages': 5})
         event_list = dictfetchall(cursor)
 
         context = {
@@ -158,25 +158,28 @@ def updateDeleteTestimony(request):
 def login(request):
     if (request.method == "POST"):
         form = LoginForm(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data.get('email')
-            cursor = connection.cursor()
-            cursor.execute('SELECT * FROM event.organizer WHERE email = %(email)s', {'email': email})
-            res1 = dictfetchall(cursor)
-            npwp = res1[0]['npwp']
+        try:
+            if form.is_valid():
+                email = form.cleaned_data.get('email')
+                cursor = connection.cursor()
+                cursor.execute('SELECT * FROM event.organizer WHERE email = %(email)s', {'email': email})
+                res1 = dictfetchall(cursor)
+                npwp = res1[0]['npwp']
 
-            profile = {
-                'npwp': npwp,
-                **form.cleaned_data,
-            }
+                profile = {
+                    'npwp': npwp,
+                    **form.cleaned_data,
+                }
 
-            request.session['profile'] = profile
-            request.session['credentials'] = {**form.cleaned_data, }
+                request.session['profile'] = profile
+                request.session['credentials'] = {**form.cleaned_data, }
 
-            return redirect(reverse('landingpage'))
-        else:
-            message = 'ACCOUNT IS NOT FOUND'
-            return render(request, 'registration/login.html', {'message': message})
+                return redirect(reverse('landingpage'))
+        except IndexError:
+            pass
+
+        message = 'ACCOUNT IS NOT FOUND'
+        return render(request, 'registration/login.html', {'message': message})
     else:
         return render(request, 'registration/login.html', {})
 
@@ -184,28 +187,31 @@ def login(request):
 def loginVisitor(request):
     if request.method == "POST":
         form = LoginForm(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data.get('email')
-            cursor = connection.cursor()
-            cursor.execute('SELECT * FROM event.VISITOR WHERE email = %(email)s', {'email': email})
-            res1 = dictfetchall(cursor)
-            first_name = res1[0]['first_name']
-            last_name = res1[0]['last_name']
+        try:
+            if form.is_valid():
+                email = form.cleaned_data.get('email')
+                cursor = connection.cursor()
+                cursor.execute('SELECT * FROM event.VISITOR WHERE email = %(email)s', {'email': email})
+                res1 = dictfetchall(cursor)
+                first_name = res1[0]['first_name']
+                last_name = res1[0]['last_name']
 
 
-            profile = {
-                'first_name': first_name,
-                'last_name': last_name,
-                **form.cleaned_data,
-            }
+                profile = {
+                    'first_name': first_name,
+                    'last_name': last_name,
+                    **form.cleaned_data,
+                }
 
-            request.session['profile'] = profile
-            request.session['credentials'] = {**form.cleaned_data, }
+                request.session['profile'] = profile
+                request.session['credentials'] = {**form.cleaned_data, }
 
-            return redirect(reverse('landingpage'))
-        else:
-            message = 'ACCOUNT IS NOT FOUND'
-            return render(request, 'registration/loginVisitor.html', {'message': message})
+                return redirect(reverse('landingpage'))
+        except IndexError:
+            pass
+
+        message = 'ACCOUNT IS NOT FOUND'
+        return render(request, 'registration/loginVisitor.html', {'message': message})
     else:
         return render(request, 'registration/loginVisitor.html', {})
 
