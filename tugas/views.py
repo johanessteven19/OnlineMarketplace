@@ -136,11 +136,11 @@ def createEvent(request):
         int+=1
 
         cursor = connection.cursor()
-        type_id = cursor.execute("SELECT type_id FROM TYPE WHERE type_name = %(eventtype)s", {'eventtype':eventtype}))
+        type_id = cursor.execute('SELECT type_id FROM event.TYPE WHERE type_name = %(eventtype)s', {'eventtype': eventtype})
         organizer_email = cursor.execute("SELECT email FROM EVENT.ORGANIZER")
 
-        cursor.execute("INSERT INTO EVENT.EVENT VALUES (%(event_id)s, %(eventname)s, %(start_date)s, %(end_date)s, %(start_time)s, %(end_time)s, %(description)s, %(total_capacity)s, %(total_available_capacity)s, %(type_id)s, %(organizer_email)s",
-        {'event_id': event_id, 'eventname': eventname, 'start_date': start_date, 'end_date': end_date, 'start_time': start_time, 'end_time': end_time, 'description': description, 'total_capacity': total_capacity, 'total_available_capacity': total_available_capacity, 'type_id': type_id, 'organizer_email': organizer_email})
+        cursor.execute("INSERT INTO EVENT.EVENT VALUES (%(event_id)s, %(eventname)s, %(start_date)s, %(end_date)s, %(start_time)s, %(end_time)s, %(description)s, %(total_capacity)s, %(total_available_capacity)s, %(type_id)s, %(organizer_email)s)",
+        {'event_id': event_id, 'eventname': name, 'start_date': start_date, 'end_date': end_date, 'start_time': start_time, 'end_time': end_time, 'description': description, 'total_capacity': total_capacity, 'total_available_capacity': total_available_capacity, 'type_id': type_id, 'organizer_email': organizer_email})
     else:
         return render(request,'pages/createevent.html',{})
 
