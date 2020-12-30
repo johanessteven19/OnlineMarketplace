@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e84d7652-fa31-4aef-9954-7a03bb9abdad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tugas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -199,11 +203,6 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f8598865" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@35899dc" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f8598865" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@10cbcef5" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
@@ -247,11 +246,6 @@
           <url>file://$PROJECT_DIR$/tugas/datalayer.py</url>
           <line>29</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/tugas/templates/pages/index.html</url>
-          <line>11</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

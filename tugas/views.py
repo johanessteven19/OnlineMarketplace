@@ -35,7 +35,13 @@ def landingpage(request):
 
 
 def profile(request):
-    return render(request, 'pages/profile.html', {})
+    profile = request.session.get('profile')
+    credentials = request.session.get('credentials')
+    context = {
+        'request': request,
+        'profile': profile,
+    }
+    return render(request, 'pages/profile.html', context)
 
 
 def editprofile(request):

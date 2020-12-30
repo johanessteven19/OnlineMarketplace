@@ -7,34 +7,27 @@
 
 <!-- Text landing -->
 {% block content %}
-{% comment %} 
-{% if user.is_authenticated %}
-{% endcomment %}
-	<center>
+{% load tags %}
+{% is_authenticated as auth %}
+{% if auth %}
+<center>
 	<div>
     <div class="heroText">
         EVENT+ - Profile
     </div>
-	<div class='topnav'>
-        <a href="{% url 'landingpage' %}"> Home </a>
-		<a class='active' href="{% url 'profile' %}"> Profile </a>
-        <a href="{% url 'ewallet' %}"> Wallet </a>
-        <a href="{% url 'mytransactions' %}"> Transactions </a>
-		<a href="{% url 'registervisitor' %}">Register Visitor</a>
-		<a href="{% url 'registerorganizer' %}">Register Organizer</a>
-    </div>
     <div>
 		<a href= "{% url 'editprofile' %}"> <h3> Edit Profile </h3> </a>
-        <p> Email: {{ user.email }} </p>
-		<p> Name: {{ user.username }} </p>
-		<p> Identity: NPWP </p>
-		<p> Address: Jalan Benda No. 99 </p>
+        <p> Email: {{ profile.email }} </p>
+        <p> Name: {{ profile.first_name }} {{profile.last_name}} </p>
+        {% if profile.type == 'visitor' %}
+        {%else%}
+		<p> Identity: {{profile.npwp}} </p>
+		<p> Address: {{profile.address}} </p>
+        {% endif%}
     </div>
 	</div>
     </center>
-    {% comment %} 
     {% else %}
-    {% endcomment %}
 <div class="container">
     <div class="heroText">
         You are not logged in!
@@ -43,7 +36,5 @@
         <a href="{% url 'landingpage' %}"> HOME </a>
     </div>
 </div>
-{% comment %} 
 {% endif %}
-{% endcomment %}
 {% endblock %}
