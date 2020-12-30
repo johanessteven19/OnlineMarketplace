@@ -32,12 +32,26 @@ def createEvent(request):
     if(request.method=="POST"):
         # Ini placeholder
         data = request.POST
-        email = data['email']
-        password = data['Password']
+        name = data['eventname']
+        description = data['eventdesc']
+        theme_name = data['eventtheme']
+        start_date = data['startdate']
+        end_date = data['enddate']
+        start_time = data['start_time']
+        end_time = data['end_time']
+        eventtype = data['eventtype']
+        eventlocation = data['eventlocation']
+        ticketclass = data['ticketclass']
+        int = 100
+        event_id = "E" + int
+        int++
         cursor = connection.cursor()
-        cursor.execute("SET search_path TO EVENT;")
-        cursor.execute('SELECT password FROM EVENT.USER WHERE email = %(email)s',{'email':email})
-        result = dictfetchall(cursor)
+        type_id = cursor.execute("SELECT type_id FROM TYPE WHERE type_name = %(theme_name)s',{'theme_name':theme_name}))
+        organizer_email = cursor.execute("SELECT organizer_email FROM EVENT.ORGANIZER WHERE ")
+
+        cursor.execute("INSERT INTO EVENT.EVENT VALUES (%(event_id)s, %(eventname)s, %(start_date)s, %(end_date)s, %(start_time)s, %(end_time)s, %(description)s;",
+                                {'event_id': event_id, 'eventname': eventname})
+
         
     else:
         return render(request,'pages/createevent.html',{})
@@ -97,7 +111,7 @@ def login(request):
             cursor.execute('SELECT email FROM ORGANIZER WHERE email = %(email)s',{'email':email})
             res= dictfetchall(cursor)
             if(res[0]['email']==email):
-                cursor.execute('SELECT T.theme_name, E.name,E.organizer_email,L.venue_name,L.address,L.city,E.start_date,E.end_date,E.end_time,E.start_time,E.end_time,E.total_capacity FROM EVENT E, LOCATION L, EVENT_LOCATION EL,THEME T WHERE T.event_id = E.event_id AND L.code= EL.location_code AND EL.id_event = E.event_id AND E.organizer_email=%(email)s ;',{'email':email})
+                cursor.execute('SELECT T.theme_name, E.name, E.organizer_email, L.venue_name,L.address,L.city,E.start_date,E.end_date,E.end_time,E.start_time,E.end_time,E.total_capacity FROM EVENT E, LOCATION L, EVENT_LOCATION EL,THEME T WHERE T.event_id = E.event_id AND L.code= EL.location_code AND EL.id_event = E.event_id AND E.organizer_email=%(email)s ;',{'email':email})
                 event_list = dictfetchall(cursor)
                 return render(request,'pages/organizer.html',{'event':event_list})
         else:
