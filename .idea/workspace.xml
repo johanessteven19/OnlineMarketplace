@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84d7652-fa31-4aef-9954-7a03bb9abdad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tugas/templates/pages/landingSlideNav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/addewallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/addewallet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/createTestimonies.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/createTestimonies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/createevent.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/createevent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/deletetransaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/deletetransaction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/editevent.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/editevent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/editprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/editprofile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/ewallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/ewallet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/mytransactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/mytransactions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/organizerProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/organizerProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/registerevent.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/registerevent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/registerorganizer.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/registerorganizer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/registervisitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/registervisitor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/sharedProfit.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/sharedProfit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/transactionPayment.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/transactionPayment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/viewEventDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/viewEventDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/viewTestimonies.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/viewTestimonies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/registration/loginVisitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/registration/loginVisitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tugas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

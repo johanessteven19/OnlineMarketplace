@@ -209,6 +209,17 @@ def loginVisitor(request):
     else:
         return render(request, 'registration/loginVisitor.html', {})
 
+def logout(request):
+    profile = request.session.get('profile')
+    credentials = request.session.get('credentials')
+    if profile:
+        del request.session['profile']
+
+    if credentials:
+        del request.session['credentials']
+
+    return redirect(reverse('landingpage'))
+
 # host : ec2-54-175-243-75.compute-1.amazonaws.com
 # database: d40bv1a9pdpmo0
 # user : msoobvwvovwzyi

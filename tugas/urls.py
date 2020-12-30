@@ -23,6 +23,7 @@ urlpatterns = [
     path('profit-summary/', views.profitSummary, name='profitSummary'),
     path('update-delete-testimony/', views.updateDeleteTestimony, name='updateDeleteTestimony'),
     path('login/',views.login,name='login'),
+    path('logout/', views.logout, name='logout'),
     path('loginvisitor/',views.loginVisitor,name='loginvisitor'),
     path('',views.landingpage,name='landingpage')
 ]
