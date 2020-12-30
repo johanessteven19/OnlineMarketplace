@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.db import connection
+from django.db import connection, InternalError
 
 # Create your views here.
 def home(request):
@@ -22,10 +22,13 @@ def registervisitor(request):
         fname = data['your_fname']
         lname = data['your_lname']
         cursor = connection.cursor()
-        cursor.execute("SET search_path TO EVENT;")
-        cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
-                                {'email': email, 'password': password})
-        cursor.execute("INSERT INTO EVENT.VISITOR VALUES (%(email)s, %(fname)s, %(lname)s);", {'email': email, 'fname': fname, 'lname': lname})
+        try: 
+            cursor.execute("SET search_path TO EVENT;")
+            cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
+                                    {'email': email, 'password': password})
+            cursor.execute("INSERT INTO EVENT.VISITOR VALUES (%(email)s, %(fname)s, %(lname)s);", {'email': email, 'fname': fname, 'lname': lname})
+        except InternalError:
+            return render(request,'pages/registerorganizer.html',{'message': "You've already created the account!"})
         profile['first_name']=fname
         profile['last_name'] = lname
         return render(request,'pages/index.html',{'profile':[profile]})
@@ -43,10 +46,13 @@ def registerorganizer(request):
         lname = data['your_lname']
         npwp = data['your_npwp_ktp']
         cursor = connection.cursor()
-        cursor.execute("SET search_path TO EVENT;")
-        cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
-                                {'email': email, 'password': password})
-        cursor.execute("INSERT INTO EVENT.ORGANIZER VALUES (%(email)s, %(npwp)s);", {'email': email, 'npwp': npwp})
+        try: 
+            cursor.execute("SET search_path TO EVENT;")
+            cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
+                                    {'email': email, 'password': password})
+            cursor.execute("INSERT INTO EVENT.ORGANIZER VALUES (%(email)s, %(npwp)s);", {'email': email, 'npwp': npwp})
+        except InternalError:
+            return render(request,'pages/registerorganizer.html',{'message': "You've already created the account!"})
         profile['first_name']=fname
         profile['last_name'] = lname
         return render(request,'pages/index.html',{'profile':[profile]})
