@@ -29,7 +29,18 @@ def organizer(request):
     return render(request,'pages/organizer.html',{})
 
 def createEvent(request):
-    return render(request,'pages/createevent.html',{})
+    if(request.method=="POST"):
+        # Ini placeholder
+        data = request.POST
+        email = data['email']
+        password = data['Password']
+        cursor = connection.cursor()
+        cursor.execute("SET search_path TO EVENT;")
+        cursor.execute('SELECT password FROM EVENT.USER WHERE email = %(email)s',{'email':email})
+        result = dictfetchall(cursor)
+        
+    else:
+        return render(request,'pages/createevent.html',{})
 
 def editEvent(request):
     return render(request,'pages/editevent.html',{})
