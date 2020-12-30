@@ -1,7 +1,7 @@
-<html>
-<head>
-</head>
-    <body>
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
 
     <center>
     <h1> WELCOME TO EVENT +</h1>
@@ -9,6 +9,15 @@
     <a href ="{% url 'loginvisitor' %}">Visitor</a>
     <br>
     <a href ="{% url 'login' %}">Organizer</a>
+
+    <p>I already have an account</p>
+    <div class="cta-full bg-black">
+        <a href="{% url 'registervisitor' %}">As Visitor</a>
+    </div>
+    <div class="cta-full bg-black">
+        <a href="{% url 'registerorganizer' %}">As Organizer</a>
+    </div>
+
     </center>
 </body>
-</html>
+{% endblock content %}

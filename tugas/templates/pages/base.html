@@ -7,11 +7,38 @@
 
 <head>
   <title>{% block title %}The BASE{% endblock %}</title>
+
+  <style>
+    .cta-full {
+      width: 100%;
+      border-radius: 5px;
+      padding: 1em 2em;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid rgba(0,0,0,1);
+  }
+  .bg-red {
+    background-color: red;
+    color: white;
+  }
+
+  .bg-black {
+      background-color: black;
+      color: white;
+  }
+
+  .bg-white{
+      background-color: white;
+      color: black;
+    
+  }
+
+    </style>
 </head>
 <body>
   <main>
     {% block content %}
-    {% endblock %}
+    {% endblock content %}
   </main>
 </body>
 </html>
