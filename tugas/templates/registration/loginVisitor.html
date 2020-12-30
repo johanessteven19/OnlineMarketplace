@@ -8,7 +8,7 @@
 
 <title> Log In </title>
 
-<h2>Log In AS Organizer</h2>
+<h2>Log In As Visitor</h2>
 <form method="POST">
   {% csrf_token %}
   <label for="email">Email</label>
@@ -17,7 +17,7 @@
   <label for ="password"> Password </label>
   <input type ="password" name="Password" id ="Password">
   <br>
-  <button type="submit" formaction="{% url 'login'%}">Log In</button>
+  <button type="submit" formaction="{% url 'loginvisitor'%}">Log In</button>
 </form>
 {{message}}
 </html>

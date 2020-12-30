@@ -79,12 +79,12 @@
 
   <div class="col-12">
     <label for="inputAddress" class="form-label">Start Time</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress" name="start_time" data-format="hh:mm:ss">
   </div>
 
   <div class="col-12">
     <label for="inputAddress" class="form-label">End Time</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress" name="end_time" data-format="hh:mm:ss">
   </div>
 
 <div class="row-mb-3">
@@ -159,6 +159,15 @@
       <button type="button"  class="btn btn-outline-secondary" id="click1">Cancel</button>
     </div>
     </center>
+</div>
+<div class="well">
+  <div id="datetimepicker3" class="input-append">
+    <input data-format="hh:mm:ss" type="text"></input>
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+  </div>
 </div>
 <script>
     $( function() {
