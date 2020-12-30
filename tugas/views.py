@@ -42,8 +42,14 @@ def createEvent(request):
         eventtype = data['eventtype']
         eventlocation = data['eventlocation']
         ticketclass = data['ticketclass']
+
+        # table event : event_id(increment), name(from form), start_date(form), end_date(form), 
+        #               start_time(form), end_time(form), 
+        #               description(form), total_capacity(form --> ticketclass), 
+        #               total_available_capacity(form-->ticketclass), type_id(SELECT FROM TYPE), 
+        #               organizer_email(SELECT FROM ORGANIZER)
         int = 100
-        event_id = "E" + int
+        event_id = "E" + int    # Auto-generate?
         int++
         cursor = connection.cursor()
         type_id = cursor.execute("SELECT type_id FROM TYPE WHERE type_name = %(theme_name)s',{'theme_name':theme_name}))
