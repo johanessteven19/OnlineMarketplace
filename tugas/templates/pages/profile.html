@@ -18,11 +18,10 @@
     <div>
 		<a href= "{% url 'editprofile' %}"> <h3> Edit Profile </h3> </a>
         <p> Email: {{ profile.email }} </p>
-        <p> Name: {{ profile.first_name }} {{profile.last_name}} </p>
         {% if profile.type == 'visitor' %}
+            <p> Name: {{ profile.first_name }} {{profile.last_name}} </p>
         {%else%}
-		<p> Identity: {{profile.npwp}} </p>
-		<p> Address: {{profile.address}} </p>
+		    <p> Identity: {{profile.npwp}} </p>
         {% endif%}
     </div>
 	</div>
