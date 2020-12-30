@@ -8,6 +8,8 @@ def landingpage(request):
     return render(request,'pages/landingpage.html',{})
 
 def profile(request):
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM EVENT.ORGANIZER WHERE')
     return render(request,'pages/profile.html',{})
     
 def editprofile(request):
