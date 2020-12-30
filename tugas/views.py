@@ -55,7 +55,7 @@ def registerorganizer(request):
             return render(request,'pages/registerorganizer.html',{'message': "You've already created the account!"})
         profile['first_name']=fname
         profile['last_name'] = lname
-        return render(request,'pages/index.html',{'profile':[profile]})
+        return render(request,'pages/organizer.html',{'profile':[profile]})
     else:
         return render(request,'pages/registerorganizer.html',{})
 
@@ -154,7 +154,7 @@ def loginVisitor(request):
             if(res1[0]['email']==email):
                 cursor.execute('SELECT T.theme_name, E.name,E.organizer_email,L.venue_name,L.address,L.city,E.start_date,E.end_date,E.end_time,E.start_time,E.end_time,E.total_capacity FROM EVENT E, LOCATION L, EVENT_LOCATION EL,THEME T WHERE T.event_id = E.event_id AND L.code= EL.location_code AND EL.id_event = E.event_id;')
                 event_list = dictfetchall(cursor)
-                return render(request,'pages/index.html',{'event':event_list,'profile':[profile]})
+                return render(request,'pages/organizer.html',{'event':event_list,'profile':[profile]})
         else:
             message ='ACCOUNT IS NOT FOUND'
             return render(request,'registration/loginVisitor.html',{'message':message})
