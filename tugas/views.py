@@ -50,13 +50,13 @@ def createEvent(request):
         #               organizer_email(SELECT FROM ORGANIZER)
         int = 100
         event_id = "E" + int    # Auto-generate?
-        int++
+        int+=1
         cursor = connection.cursor()
         type_id = cursor.execute("SELECT type_id FROM TYPE WHERE type_name = %(eventtype)s',{'eventtype':eventtype}))
-        organizer_email = cursor.execute("SELECT organizer_email FROM EVENT.ORGANIZER WHERE ")
+        organizer_email = cursor.execute("SELECT email FROM EVENT.ORGANIZER WHERE ")
 
         cursor.execute("INSERT INTO EVENT.EVENT VALUES (%(event_id)s, %(eventname)s, %(start_date)s, %(end_date)s, %(start_time)s, %(end_time)s, %(description)s;",
-                                {'event_id': event_id, 'eventname': eventname})
+        {'event_id': event_id, 'eventname': eventname, 'start_date': start_date, 'end_date': end_date, 'start_time': start_time, 'end_time': end_time, 'description': description})
 
         
     else:
