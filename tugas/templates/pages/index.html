@@ -14,7 +14,7 @@
       {%endfor%}
 </div></center> <br>
 <div class="topnav">
-  <a class='active' href="{% url 'index' %}"> Home </a>
+  <a class='active' href="{% url 'landingpage' %}"> Home </a>
   <a href="{% url 'profile' %}"> Profile </a>
   <a href="{% url 'ewallet' %}"> Wallet </a>
   <a href="{% url 'mytransactions' %}"> Transactions </a>
@@ -57,6 +57,6 @@
  {% endfor%}
 </table>
 <br>
-<center><a href="#" class="previous">&laquo; Previous</a>
-<a href="#" class="previous">&laquo; Next</a></center>
+<center><a href="{% url 'landingpage' %}?page={{ page|add:"-1" }}" class="previous">&laquo; Previous</a>
+<a href="{% url 'landingpage' %}?page={{ page|add:"1" }}" class="previous">&laquo; Next</a></center>
 {% endblock %}
