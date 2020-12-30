@@ -175,6 +175,7 @@ def login(request):
                 profile = {
                     'npwp': npwp,
                     **form.cleaned_data,
+                    'type': 'organizer',
                 }
 
                 request.session['profile'] = profile
@@ -207,6 +208,7 @@ def loginVisitor(request):
                     'first_name': first_name,
                     'last_name': last_name,
                     **form.cleaned_data,
+                    'type': 'visitor',
                 }
 
                 request.session['profile'] = profile

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e84d7652-fa31-4aef-9954-7a03bb9abdad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tugas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -238,16 +234,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tugas/datalayer.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
