@@ -14,13 +14,13 @@
         EVENT+ - Transactions
     </div>
 	<div class='topnav'>
-        <a href="{% url 'index' %}"> Home </a>
+        <a href="{% url 'landingpage' %}"> Home </a>
 		<a href="{% url 'profile' %}"> Profile </a>
         <a href="{% url 'ewallet' %}"> Wallet </a>
         <a class='active' href="{% url 'mytransactions' %}"> Transactions </a>
 		<a href="{% url 'registervisitor' %}">Register Visitor</a>
 		<a href="{% url 'registerorganizer' %}">Register Organizer</a>
-		<a href="{% url 'logout' %}">Log Out</a>
+		<a href="{% url 'login' %}">Log Out</a>
     </div>
         <table>
         <tr>
@@ -60,7 +60,7 @@
         You are not logged in!
     </div>
     <div>
-        <a href="{% url 'index' %}"> HOME </a>
+        <a href="{% url 'landingpage' %}"> HOME </a>
     </div>
 </div>
 {% endif %}

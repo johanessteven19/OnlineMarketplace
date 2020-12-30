@@ -7,20 +7,21 @@
 
 <!-- Text landing -->
 {% block content %}
+{% comment %} 
 {% if user.is_authenticated %}
+{% endcomment %}
 	<center>
 	<div>
     <div class="heroText">
         EVENT+ - Profile
     </div>
 	<div class='topnav'>
-        <a href="{% url 'index' %}"> Home </a>
+        <a href="{% url 'landingpage' %}"> Home </a>
 		<a class='active' href="{% url 'profile' %}"> Profile </a>
         <a href="{% url 'ewallet' %}"> Wallet </a>
         <a href="{% url 'mytransactions' %}"> Transactions </a>
 		<a href="{% url 'registervisitor' %}">Register Visitor</a>
 		<a href="{% url 'registerorganizer' %}">Register Organizer</a>
-		<a href="{% url 'logout' %}">Log Out</a>
     </div>
     <div>
 		<a href= "{% url 'editprofile' %}"> <h3> Edit Profile </h3> </a>
@@ -30,15 +31,19 @@
 		<p> Address: Jalan Benda No. 99 </p>
     </div>
 	</div>
-	</center>
-{% else %}
+    </center>
+    {% comment %} 
+    {% else %}
+    {% endcomment %}
 <div class="container">
     <div class="heroText">
         You are not logged in!
     </div>
     <div>
-        <a href="{% url 'index' %}"> HOME </a>
+        <a href="{% url 'landingpage' %}"> HOME </a>
     </div>
 </div>
+{% comment %} 
 {% endif %}
+{% endcomment %}
 {% endblock %}
