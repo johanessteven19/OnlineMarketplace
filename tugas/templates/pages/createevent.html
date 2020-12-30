@@ -1,97 +1,109 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block content %}
     <head>
+=======
+{% load static %}
+
+<html>
+
+<head>
+>>>>>>> dev-jo
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    </head>
-    <body>
-    <center><h1>Create Event</h1></center>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>Create Event</h1>
+    </center>
     <div class="container">
-        <form>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Event Name</label>
-    <input type="text" class="form-control" id="inputAddress" >
-  </div>
+        <form method="POST">
+		{% csrf_token %}
+            <div class="col-12">
+                <label for="eventname" class="form-label">Event Name</label>
+                <input type="text" class="form-control" name="eventname" id="eventname">
+            </div>
 
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Event Description</label>
-    <input type="text" class="form-control" id="inputAddress" >
-  </div>
+            <div class="col-12">
+                <label for="eventdesc" class="form-label">Event Description</label>
+                <input type="text" class="form-control" name="eventdesc" id="eventdesc">
+            </div>
 
-  <div class="row mb-3">
-   <label for="inputPassword3" class="col-sm-2 col-form-label">Theme </label>
-    <div class="col-sm-10 offset-sm-2">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+            <div class="row mb-3">
+                <label for="eventtheme" class="col-sm-2 col-form-label">Theme </label>
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="fashion" value="Fashion">
+                        <label class="form-check-label" for="fashion">
           Fashion
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="art" value="Art">
+                        <label class="form-check-label" for="art">
           Art
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="technology" value="Technology">
+                        <label class="form-check-label" for="technology">
           Technology
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="education" value="Education">
+                        <label class="form-check-label" for="education">
           Education
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="music" value="Music">
+                        <label class="form-check-label" for="music">
           Music
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="food" value="Food">
+                        <label class="form-check-label" for="food">
           Food
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1" value="Education">
-        <label class="form-check-label" for="gridCheck1">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="travel" value="Travel">
+                        <label class="form-check-label" for="travel">
           Travel
         </label>
-      </div>
-    </div>
-  </div>
-  <div class="col-12">
-    <label for="inputAddress"  class="form-label">Start Date</label>
-    <input type="text" id="datepicker" class="form-control" id="inputAddress" >
-  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="startdate" class="form-label">Start Date</label>
+                <input type="text" class="form-control" id="startdate">
+            </div>
 
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">End Date</label>
-    <input type="text" id="datepicker1"class="form-control" id="inputAddress" >
-  </div>
+            <div class="col-12">
+                <label for="enddate" class="form-label">End Date</label>
+                <input type="text" class="form-control" id="enddate">
+            </div>
 
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Start Time</label>
-    <input type="text" class="form-control" id="inputAddress" name="start_time" data-format="hh:mm:ss">
-  </div>
+            <div class="col-12">
+                <label for="start_time" class="form-label">Start Time</label>
+                <input type="text" class="form-control" id="start_time" name="start_time" data-format="hh:mm:ss">
+            </div>
 
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">End Time</label>
-    <input type="text" class="form-control" id="inputAddress" name="end_time" data-format="hh:mm:ss">
-  </div>
+            <div class="col-12">
+                <label for="end_time" class="form-label">End Time</label>
+                <input type="text" class="form-control" id="end_time" name="end_time" data-format="hh:mm:ss">
+            </div>
 
-<div class="row-mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Event Type</label>
-    <select id="inputState" class="form-select">
+            <div class="row-mb-3">
+                <label for="eventtype" class="col-sm-2 col-form-label">Event Type</label>
+                <select id="eventtype" class="form-select">
       <option selected>Choose...</option>
       <option>Networking</option>
       <option>Ceremony</option>
@@ -104,6 +116,7 @@
       <option>Seminar</option>
       <option>Workshop</option>
     </select>
+<<<<<<< HEAD
   </div>
 <br>
 <div id="event">
@@ -227,3 +240,116 @@
     </div>
     </body>
 {% endblock content %}
+=======
+            </div>
+            <br>
+            <div id="event">
+                <div class="row g-3" id="content">
+                    <label for="eventlocation" id="venue" class="form-label">Event Location</label>
+                    <div class="col-sm-2">
+                        <input type="text" id="venuename" class="form-control" placeholder="Venue Name" aria-label="City">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="city" class="form-control" placeholder="City" aria-label="State">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" id="address" class="form-control" placeholder="Address" aria-label="Zip">
+                    </div
+                </div>
+            </div>
+            <br>
+            <br>
+            <div id="classticket">
+                <div class="row g-3" id="content1">
+                    <label for="ticketclass" id="TicketClass" class="form-label">Ticket Class</label>
+                    <div class="col-sm-2">
+                        <input type="text" id="classname" class="form-control" placeholder="Class Name" aria-label="City">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" id="rate" class="form-control" placeholder="Rate" aria-label="State">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" id="capacity" class="form-control" placeholder="Capacity" aria-label="Zip">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="row g-3">
+                    <center>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-outline-secondary" id="cancel" type="submit" formaction="{% url 'createevent'%}">Create Event</button>
+                        </div>
+                        <br>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-outline-secondary" id="cancel">Cancel</button>
+                        </div>
+                    </center>
+                </div>
+        </form>
+        <div class="well">
+            <div id="datetimepicker3" class="input-append">
+                <input data-format="hh:mm:ss" type="text"></input>
+                <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+            </div>
+        </div>
+        <script>
+            $( function() {
+            $( "#datepicker" ).datepicker();
+          } );
+          $( function() {
+            $( "#datepicker1" ).datepicker();
+          } );
+            function del(){
+              var x =document.getElementById("loc"+arguments[0]);
+              x.parentNode.removeChild(x);
+            };
+            function del1(){
+              var x =document.getElementById("locc"+arguments[0]);
+              x.parentNode.removeChild(x);
+            };
+          var but = document.getElementById("click"),count = 0;
+          but.onclick= function(){
+            count+=1;
+            var block_to_insert;
+            var container_block;
+            block_to_insert = document.createElement('div');
+            block_to_insert.className ='row g-3';
+            block_to_insert.id ='loc'+count;
+            block_to_insert.innerHTML =
+            '<div class="col-sm-2"><input type="text" class="form-control" placeholder="Venue Name" id ="venue'+
+            count+'"'+'aria-label="City"></div>'+
+            '<div class="col-sm-2"><input type="text" class="form-control" placeholder="City" id="city'+count+'"'+'aria-label="State">'+
+            '</div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Address" aria-label="Zip"></div>'+
+            '<div class="col-sm-1"><button type="button" id ="delete"'+
+            'onclick ="del('+count+')" class="btn btn-outline-secondary">Delete </button></div></div>';
+            container_block = document.getElementById('content');
+            container_block.appendChild(block_to_insert);
+          };
+          var but = document.getElementById("click1"),count = 0;
+          but.onclick= function(){
+            count+=1;
+            var block_to_insert;
+            var container_block;
+            block_to_insert = document.createElement('div');
+            block_to_insert.className ='row g-3';
+            block_to_insert.id ='locc'+count;
+            block_to_insert.innerHTML =
+            '<div class="col-sm-2"><input type="text" class="form-control" placeholder="Class Name" id ="venue'+
+            count+'"'+'aria-label="City"></div>'+
+            '<div class="col-sm-2"><input type="text" class="form-control" placeholder="Rate" id="city'+count+'"'+'aria-label="State">'+
+            '</div><div class="col-sm-4"><input type="text" class="form-control" placeholder="Capacity" aria-label="Zip"></div>'+
+            '<div class="col-sm-1"><button type="button" id ="delete"'+
+            'onclick ="del1('+count+')" class="btn btn-outline-secondary">Delete </button></div></div>';
+            container_block = document.getElementById('content1');
+            container_block.appendChild(block_to_insert);
+          }
+        </script>
+        </div>
+</body>
+
+</html>
+>>>>>>> dev-jo

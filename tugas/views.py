@@ -110,7 +110,39 @@ def organizer(request):
 
 
 def createEvent(request):
-    return render(request, 'pages/createevent.html', {})
+    if(request.method=="POST"):
+        # Ini placeholder
+        data = request.POST
+        name = data['eventname']
+        description = data['eventdesc']
+        theme_name = data['eventtheme']
+        start_date = data['startdate']
+        end_date = data['enddate']
+        start_time = data['start_time']
+        end_time = data['end_time']
+        eventtype = data['eventtype']
+        eventlocation = data['eventlocation']
+        ticketclass = data['ticketclass']
+        total_capacity = data['capacity']
+        total_available_capacity = data['capacity']
+
+        # table event : event_id(increment), name(from form), start_date(form), end_date(form), 
+        #               start_time(form), end_time(form), 
+        #               description(form), total_capacity(form --> ticketclass), 
+        #               total_available_capacity(form-->ticketclass), type_id(SELECT FROM TYPE), 
+        #               organizer_email(SELECT FROM ORGANIZER)
+        int = 100
+        event_id = "E" + int    # Auto-generate?
+        int+=1
+
+        cursor = connection.cursor()
+        type_id = cursor.execute("SELECT type_id FROM TYPE WHERE type_name = %(eventtype)s", {'eventtype':eventtype}))
+        organizer_email = cursor.execute("SELECT email FROM EVENT.ORGANIZER")
+
+        cursor.execute("INSERT INTO EVENT.EVENT VALUES (%(event_id)s, %(eventname)s, %(start_date)s, %(end_date)s, %(start_time)s, %(end_time)s, %(description)s, %(total_capacity)s, %(total_available_capacity)s, %(type_id)s, %(organizer_email)s",
+        {'event_id': event_id, 'eventname': eventname, 'start_date': start_date, 'end_date': end_date, 'start_time': start_time, 'end_time': end_time, 'description': description, 'total_capacity': total_capacity, 'total_available_capacity': total_available_capacity, 'type_id': type_id, 'organizer_email': organizer_email})
+    else:
+        return render(request,'pages/createevent.html',{})
 
 
 def editEvent(request):
