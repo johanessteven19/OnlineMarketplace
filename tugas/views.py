@@ -98,11 +98,38 @@ def registerorganizer(request):
 
 
 def ewallet(request):
-    return render(request, 'pages/ewallet.html', {})
+    profile = request.session.get('profile')
+    credentials = request.session.get('credentials')
+    context = {
+        'request': request,
+        'profile': profile,
+    }
+    return render(request, 'pages/ewallet.html', context)
 
 
 def addewallet(request):
-    return render(request, 'pages/addewallet.html', {})
+    if (request.method == "POST"):
+        profile = {}
+        data = request.POST
+        email = data['your_email']
+        password = data['your_password']
+        fname = data['your_fname']
+        lname = data['your_lname']
+        npwp = data['your_npwp_ktp']
+        cursor = connection.cursor()
+        try:
+            cursor.execute("SET search_path TO EVENT;")
+            cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
+                           {'email': email, 'password': password})
+            cursor.execute("INSERT INTO EVENT.ORGANIZER VALUES (%(email)s, %(npwp)s);", {'email': email, 'npwp': npwp})
+        except InternalError:
+            return render(request, 'pages/addewallet.html', {'message': "You've already created the account!"})
+        profile['first_name'] = fname
+        profile['last_name'] = lname
+        return render(request, 'pages/ewallet.html', {'profile': [profile]})
+    else:
+        return render(request, 'pages/addewallet.html', {})
+
 
 
 def organizer(request):

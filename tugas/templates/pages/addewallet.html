@@ -7,7 +7,9 @@
 
 <!-- Text landing -->
 {% block content %}
-{% if user.is_authenticated %}
+{% load tags %}
+{% is_authenticated as auth %}
+{% if auth %}
 <div class="container">
     <div class="heroText">
         Add Balance
