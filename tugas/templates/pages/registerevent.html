@@ -7,8 +7,10 @@
 
 <!-- Text landing -->
 {% block content %}
-{% if user.is_authenticated %}
-	<center>
+{% load tags %}
+{% is_authenticated as auth %}
+{% if auth %}
+<center>
 <div>
     <div class="heroText">
         EVENT+ - Register for an Event
