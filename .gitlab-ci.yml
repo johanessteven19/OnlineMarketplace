@@ -30,7 +30,7 @@ Deployment:
     - gem install dpl
     - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
   script:
-    - dpl --provider=heroku --app=ga2basdat --api-key=$HEROKU_API_KEY
+    - dpl --provider=heroku --app=$HEROKU_APPNAME --api-key=$HEROKU_API_KEY
     - export HEROKU_API_KEY=$HEROKU_API_KEY
   environment:
     name: production
