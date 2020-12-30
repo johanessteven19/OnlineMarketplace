@@ -7,11 +7,61 @@
 
 <head>
   <title>{% block title %}The BASE{% endblock %}</title>
+  <style>
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    .cta-full {
+      width: 100%;
+      border-radius: 5px;
+      padding: 1em 2em;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid rgba(0,0,0,1);
+  }
+  .bg-red {
+    background-color: red;
+    color: white;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.bg-white{
+    background-color: white;
+    color: black;
+   
+}
+.container-pad16 {
+  padding: 1em 0.5em;
+  margin: 0 auto;
+}
+.wrapper-375 {
+  max-width: 812px;
+}
+
+
+  </style>
 </head>
 <body>
-  {% block slideNav %}
-  {% include 'pages/landingSlideNav.html' %}
-{% endblock slideNav %}
+  <center>
+    <div class="heroText"> Welcome to EVENT+ </div>
+  </center>    
+  {% block nav %}
+	<div class='topnav'>
+    <a href="{% url 'landingpage' %}"> Home </a>
+    <a class='' href="{% url 'profile' %}"> Profile </a>
+    <a href="{% url 'ewallet' %}"> Wallet </a>
+    <a href="{% url 'mytransactions' %}"> Transactions </a>
+    <a href="{% url 'registervisitor' %}">Register Visitor</a>
+    <a href="{% url 'registerorganizer' %}">Register Organizer</a>
+    <a href="{% url 'logout'%}">Logout</a>
+</div>
+{% endblock nav %}
+<br><br>
 
   <main>
     {% block content %}

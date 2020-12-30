@@ -7,29 +7,13 @@
 
 <!-- Text landing -->
 {% block content %}
-<center><div class="heroText"> Welcome to EVENT+ </div></center>
-<center><div>
+<center>
+  <div>
       {%for i in profile %}
         <h2>Hello,{{i.first_name}} {{i.last_name}}.</h2>
       {%endfor%}
-</div></center> <br>
-<div class="topnav">
-  <a class='active' href="{% url 'landingpage' %}"> Home </a>
-  <a href="{% url 'profile' %}"> Profile </a>
-  <a href="{% url 'ewallet' %}"> Wallet </a>
-  <a href="{% url 'mytransactions' %}"> Transactions </a>
-  <a href="{% url 'registervisitor' %}">Register Visitor</a>
-  <a href="{% url 'registerorganizer' %}">Register Organizer</a>
-  <a href=#>Log Out</a>
-
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button class="button button1">Search</button>
-    </form>
   </div>
-</div>
-<br>
+</center> 
 <table>
   <tr>
     <th>No</th>

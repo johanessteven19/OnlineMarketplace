@@ -35,7 +35,13 @@ def landingpage(request):
 
 
 def profile(request):
-    return render(request, 'pages/profile.html', {})
+    profile = request.session.get('profile')
+    credentials = request.session.get('credentials')
+    context = {
+        'request': request,
+        'profile': profile,
+    }
+    return render(request, 'pages/profile.html', context)
 
 
 def editprofile(request):
@@ -168,6 +174,7 @@ def login(request):
             profile = {
                 'npwp': npwp,
                 **form.cleaned_data,
+                'type': 'organizer'
             }
 
             request.session['profile'] = profile
@@ -197,6 +204,7 @@ def loginVisitor(request):
                 'first_name': first_name,
                 'last_name': last_name,
                 **form.cleaned_data,
+                'type': 'visitor'
             }
 
             request.session['profile'] = profile
