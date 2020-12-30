@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e84d7652-fa31-4aef-9954-7a03bb9abdad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tugas/templates/pages/landingSlideNav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/addewallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/addewallet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/createTestimonies.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/createTestimonies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/createevent.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/createevent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/deletetransaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/deletetransaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/editevent.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/editevent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/editprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/editprofile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/ewallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/ewallet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/landingpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/mytransactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/mytransactions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/organizerProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/organizerProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/registerevent.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/registerevent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/registerorganizer.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/registerorganizer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/registervisitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/registervisitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/sharedProfit.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/sharedProfit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/transactionPayment.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/transactionPayment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/viewEventDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/viewEventDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/pages/viewTestimonies.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/pages/viewTestimonies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/templates/registration/loginVisitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/templates/registration/loginVisitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas/views.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event_location: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="individual: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="organizer: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="event: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="visitor: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="d40bv1a9pdpmo0@ec2-54-175-243-75.compute-1.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d40bv1a9pdpmo0: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mNXMYdWWRSl6lBu6V4dmTtvcZi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\Basdat\GA2\ga3basdat\tugas\templatetags" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ga3basdat" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ga3basdat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ga2basdat.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f8598865" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f8598865" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@10cbcef5" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e84d7652-fa31-4aef-9954-7a03bb9abdad" name="Default Changelist" comment="" />
+      <created>1609334974734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609334974734</updated>
+      <workItem from="1609334983266" duration="8249000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tugas/datalayer.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tugas/views.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tugas/forms.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tugas/views.py</url>
+          <line>186</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

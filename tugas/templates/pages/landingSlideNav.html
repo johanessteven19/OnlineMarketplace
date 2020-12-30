@@ -1,0 +1,36 @@
+<head>
+    <style>
+        .gacSlideNav {
+            grid-auto-columns: auto;
+            max-width: calc(812px + var(--gutter)*2);
+            margin: 0 auto;
+            padding: .5rem 0;
+        }
+                
+        .horizontalNav {
+            text-decoration: none;
+            list-style: none;
+            white-space: nowrap;
+            color: rgba(0,0,0,0.5);
+            font-size: 1.1em;
+        }
+
+        .horizontalNav.active {
+            color: black;
+        }
+
+        .horizontalNav:active {
+            transform: scale(0.7);
+        }
+
+
+    </style>
+    
+</head>
+
+
+<div class="hs gacSlideNav no-scrollbar">
+    <div>
+    <a id="videoSlideNav" class="horizontalNav" href="{% url 'landingpage'%}">Home</a>
+    </div>    
+</div>

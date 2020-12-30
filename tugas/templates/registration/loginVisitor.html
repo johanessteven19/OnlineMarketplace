@@ -8,6 +8,7 @@
 
 <title> Log In </title>
 
+<center>
 <h2>Log In As Visitor</h2>
 <form method="POST">
   {% csrf_token %}
@@ -20,4 +21,5 @@
   <button type="submit" formaction="{% url 'loginvisitor'%}">Log In</button>
 </form>
 {{message}}
+</center>
 </html>

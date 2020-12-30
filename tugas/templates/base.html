@@ -9,6 +9,10 @@
   <title>{% block title %}The BASE{% endblock %}</title>
 </head>
 <body>
+  {% block slideNav %}
+  {% include 'pages/landingSlideNav.html' %}
+{% endblock slideNav %}
+
   <main>
     {% block content %}
     {% endblock %}

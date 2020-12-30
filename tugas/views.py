@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from django.db import connection
+from django.shortcuts import render,redirect
+from django.db import connection, InternalError
 
 
 # Create your views here.
@@ -43,11 +43,52 @@ def editprofile(request):
 
 
 def registervisitor(request):
-    return render(request, 'pages/registervisitor.html', {})
+    if (request.method == "POST"):
+        profile = {}
+        data = request.POST
+        email = data['your_email']
+        password = data['your_password']
+        fname = data['your_fname']
+        lname = data['your_lname']
+        cursor = connection.cursor()
+        try:
+            cursor.execute("SET search_path TO EVENT;")
+            cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
+                           {'email': email, 'password': password})
+            cursor.execute("INSERT INTO EVENT.VISITOR VALUES (%(email)s, %(fname)s, %(lname)s);",
+                           {'email': email, 'fname': fname, 'lname': lname})
+        except InternalError:
+            return render(request, 'pages/registerorganizer.html', {'message': "You've already created the account!"})
+        profile['first_name'] = fname
+        profile['last_name'] = lname
+        return render(request, 'pages/index.html', {'profile': [profile]})
+
+    else:
+        return render(request, 'pages/registervisitor.html', {})
 
 
 def registerorganizer(request):
-    return render(request, 'pages/registerorganizer.html', {})
+    if (request.method == "POST"):
+        profile = {}
+        data = request.POST
+        email = data['your_email']
+        password = data['your_password']
+        fname = data['your_fname']
+        lname = data['your_lname']
+        npwp = data['your_npwp_ktp']
+        cursor = connection.cursor()
+        try:
+            cursor.execute("SET search_path TO EVENT;")
+            cursor.execute("INSERT INTO EVENT.USER VALUES (%(email)s, %(password)s);",
+                           {'email': email, 'password': password})
+            cursor.execute("INSERT INTO EVENT.ORGANIZER VALUES (%(email)s, %(npwp)s);", {'email': email, 'npwp': npwp})
+        except InternalError:
+            return render(request, 'pages/registerorganizer.html', {'message': "You've already created the account!"})
+        profile['first_name'] = fname
+        profile['last_name'] = lname
+        return render(request, 'pages/organizer.html', {'profile': [profile]})
+    else:
+        return render(request, 'pages/registerorganizer.html', {})
 
 
 def ewallet(request):
@@ -151,6 +192,7 @@ def loginVisitor(request):
             first_name = res1[0]['first_name']
             last_name = res1[0]['last_name']
 
+
             profile = {
                 'first_name': first_name,
                 'last_name': last_name,
@@ -166,3 +208,9 @@ def loginVisitor(request):
             return render(request, 'registration/loginVisitor.html', {'message': message})
     else:
         return render(request, 'registration/loginVisitor.html', {})
+
+# host : ec2-54-175-243-75.compute-1.amazonaws.com
+# database: d40bv1a9pdpmo0
+# user : msoobvwvovwzyi
+# port : 5432
+# password : 2cb80209623cb2d61652ba09fd10d1d011a7edb48ae10bc1a55b3dd8d9b184c2
