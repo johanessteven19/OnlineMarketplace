@@ -1,0 +1,17 @@
+<!-- templates/registration/login.html -->
+{% load static %}
+
+<html>
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<meta http-equiv="pragma" content="no-cache" />
+
+
+<title> Log In </title>
+
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+</html>

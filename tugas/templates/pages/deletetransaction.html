@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Transactions{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+	<center>
+	<div>
+    <div class="heroText">
+        EVENT+ - Cancel Transaction
+    </div>
+	<div class='topnav'>
+        <a href="{% url 'index' %}"> Home </a>
+		<a href="{% url 'profile' %}"> Profile </a>
+        <a href="{% url 'ewallet' %}"> Wallet </a>
+        <a class='active' href="{% url 'mytransactions' %}"> Transactions </a>
+    </div>
+    <br><br>
+        <div class="heroText">
+            Are you sure you wish to cancel this transaction? Your balance will be refunded.<br><br>
+        </div>
+        <div>
+            <form method="post">
+                <input type="submit" value="Yes">
+                <a href= "{% url 'mytransactions' %}"> No</a>
+            </form>
+        </div>
+    <br>
+    </div>
+	</center>
+{% else %}
+<div class="container">
+    <div class="heroText">
+        You are not logged in!
+    </div>
+    <div>
+        <a href="{% url 'index' %}"> HOME </a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

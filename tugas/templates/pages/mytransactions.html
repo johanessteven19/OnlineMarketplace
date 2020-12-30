@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Transactions{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+	<center>
+	<div>
+    <div class="heroText">
+        EVENT+ - Transactions
+    </div>
+	<div class='topnav'>
+        <a href="{% url 'index' %}"> Home </a>
+		<a href="{% url 'profile' %}"> Profile </a>
+        <a href="{% url 'ewallet' %}"> Wallet </a>
+        <a class='active' href="{% url 'mytransactions' %}"> Transactions </a>
+		<a href="{% url 'registervisitor' %}">Register Visitor</a>
+		<a href="{% url 'registerorganizer' %}">Register Organizer</a>
+		<a href="{% url 'logout' %}">Log Out</a>
+    </div>
+        <table>
+        <tr>
+            <th>No</th>
+            <th>Transaction Date</th>
+            <th>Transaction Time</th>
+            <th>Transaction Status</th>
+            <th>Total Price</th>
+            <th>[Edit]</th>
+            <th>[Delete]</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3 Des 2020</td>
+            <td>10:45</td>
+            <td><a href=#>[Not Paid]</a></td>
+            <td>1000000</td>
+            <td><a href="{% url 'registerevent' %}">[Edit]</a></td>
+            <td><a href="{% url 'deletetransactions' %}">[Delete]</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>4 Des 2020</td>
+            <td>11:00</td>
+            <td>Paid Off</td>
+            <td>250000</td>
+            <td><a href="{% url 'registerevent' %}">[Edit]</a></td>
+            <td><a href="{% url 'deletetransactions' %}">[Delete]</a></td>
+        </tr>
+        </table>
+    <br>
+    </div>
+	</center>
+{% else %}
+<div class="container">
+    <div class="heroText">
+        You are not logged in!
+    </div>
+    <div>
+        <a href="{% url 'index' %}"> HOME </a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

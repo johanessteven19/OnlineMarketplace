@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Wallet{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="heroText">
+        Add Balance
+    </div>
+    <div>
+		<form method="post">
+			<p> Name: {{ user.username }} </p>
+			<p> Email: {{ user.email }} </p>
+			<label for="your_ewallet_name">E-Wallet Name: </label>
+			<select name="cars" id="cars">
+			  <option value="ovo">OVO</option>
+			  <option value="go-pay">GO-PAY</option>
+			</select>
+			<label for="your_ewallet_accountno">Account No: </label>
+			<input id="your_ewallet_accountno" type="text" name="your_ewallet_accountno" value="{{ your_ewallet_accountno }}"> <br> <br>
+			<label for="your_ewallet_currentbalance">Current Balance: </label>
+			<input id="your_ewallet_currentbalance" type="text" name="your_ewallet_currentbalance" value="{{ your_ewallet_currentbalance }}"> <br> <br>
+			<label for="your_ewallet_nominal">Nominal: </label>
+			<input id="your_ewallet_nominal" type="text" name="your_ewallet_nominal" value="{{ your_ewallet_nominal }}"> <br> <br>
+			<p> Balance after Top Up: Rp. 999,999,00 </p>
+			<input type="submit" value="Top Up">
+			<a href= "{% url 'ewallet' %}"> Cancel </a>
+		</form>
+	</div>
+</div>
+{% else %}
+<div class="container">
+    <div class="heroText">
+        You are not logged in!
+    </div>
+    <div>
+        <a href="{% url 'index' %}"> HOME </a>.
+    </div>
+</div>
+{% endif %}
+{% endblock %}

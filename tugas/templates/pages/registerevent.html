@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Register for an Event{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+	<center>
+<div>
+    <div class="heroText">
+        EVENT+ - Register for an Event
+    </div>
+	<div class='topnav'>
+        <a href="{% url 'index' %}"> Home </a>
+		<a href="{% url 'profile' %}"> Profile </a>
+        <a href="{% url 'ewallet' %}"> Wallet </a>
+        <a href="{% url 'mytransactions' %}"> Transactions </a>
+    </div>
+    <div>
+        <br><br>
+        <p>Event Theme: Fashion, Art</p>
+        <p>Event Name: Aerified</p>
+        <p>Event Description: Displaced simple suprcndl fracture w/o intrcndl fx l humerus</p>
+        <p>Date: 2019-12-23 until 2020-08-12</p>
+        <p>Event Location: Emmet,92576 Vernon Street,Gaoling</p>
+        <p>Event Type: Exhibition</p> <br>
+		<form method="post">
+			<label for="your_email">Your Email: </label>
+			<input id="your_email" type="text" name="your_email" value="{{ current_email }}"> <br> <br>
+			<label for="your_name">Your Name: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}"> <br> <br>
+            <label for="ticket_class">Ticket Class: </label>
+            <input id="ticket_class" type="text" name="ticket_class" value="{{ ticket_class }}"> <br> <br>
+            <input type="submit" value="Confirm Transaction">
+			<a href= "{% url 'profile' %}"> Cancel Transaction</a>
+            <br>
+        </form>
+    </div>
+<br>
+</div>
+	</center>
+{% else %}
+<div class="container">
+    <div class="heroText">
+        You are not logged in!
+    </div>
+    <div>
+        <a href="{% url 'index' %}"> HOME </a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

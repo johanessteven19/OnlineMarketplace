@@ -1,0 +1,107 @@
+{% block content %}
+<center>
+	<div>
+		<div class="heroText">
+			My Wallet
+		</div>
+		<div class='topnav'>
+			<a href="{% url 'index' %}"> Home </a>.
+			<a href="{% url 'profile' %}"> Profile </a>
+			<a class='active' href="{% url 'ewallet' %}"> Wallet </a>
+			<a href="{% url 'mytransactions' %}"> Transactions </a>
+			<a href="{% url 'registervisitor' %}">Register Visitor</a>
+			<a href="{% url 'registerorganizer' %}">Register Organizer</a>
+			<a href="{% url 'logout' %}">Log Out</a>
+		</div>
+		<div>
+			<p> Name: {{ user.username }} </p> 
+			<p> Email: {{ user.email }} </p> <br>
+		</div>
+		<div>
+			<style type="text/css">
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-baqh{text-align:center;vertical-align:top}
+            </style>
+            <h1>Transaction Payment</h1>
+            <p>Transaction Date: [Transaction Date]</p>
+            <p>Transaction Time: [Transaction Time]</p>
+			<table class="tg">
+			<thead>
+			  <tr>
+				<th class="tg-baqh">No</th>
+				<th class="tg-baqh">Event Name</th>
+				<th class="tg-baqh">Ticket Owner Name</th>
+				<th class="tg-baqh">Class Name</th>
+				<th class="tg-baqh">Price</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td class="tg-baqh">1</td>
+				<td class="tg-baqh">[Event A]</td>
+				<td class="tg-baqh">[Owner Name 1]</td>
+				<td class="tg-baqh">[Ticket Class 1]</td>
+				<td class="tg-baqh">Ticket Class Price 1</td>
+			  </tr>
+			  <tr>
+				<td class="tg-baqh">2</td>
+				<td class="tg-baqh">[Event B]</td>
+				<td class="tg-baqh">[Owner Name 2]</td>
+				<td class="tg-baqh">[Ticket Class 2]</td>
+				<td class="tg-baqh">Ticket Class Price 2</td>
+			  </tr>
+			</tbody>
+            </table>
+            <p>Total Price: <span id="totalPrice">[Transaction Total Price]</span></p>
+            <br><br>
+
+            <h3>Pay with E-Wallet</h3>
+            <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-baqh">Name</th>
+                    <th class="tg-baqh">Account No</th>
+                    <th class="tg-baqh">Balance</th>
+                    <th class="tg-baqh">Pay with This Account / Top Up Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-baqh">[E-Wallet Name A]</td>
+                    <td class="tg-baqh">[E-Wallet Account A]</td>
+                    <td class="tg-baqh">[E-Wallet Balance A]</td>
+                    <td class="tg-baqh">[Pay with This Account / Top Up Balance]</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-baqh">[E-Wallet Name A]</td>
+                    <td class="tg-baqh">[E-Wallet Account A]</td>
+                    <td class="tg-baqh">[E-Wallet Balance A]</td>
+                    <td class="tg-baqh">[Pay with This Account / Top Up Balance]</td>
+                  </tr>
+                </tbody>
+                </table>
+		</div>
+	</div>
+</center>
+
+
+<!-- Modal to implement later -->
+
+<div>
+    <h1>Transaction Confirmation</h1>
+    <p>E-Wallet Name: [E-Wallet name]</p>
+    <p>E-Wallet Account:</p>
+    <p>Current Balance: </p>
+    <p>Total Price: </p>
+    <br>
+    <p>Balance Left: </p>
+    <br><br>
+    <p>Are you sure to pay this transasction?</p>
+    <button>Yes</button>
+    <button>No</button>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Profile{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="heroText">
+        EVENT+ - Edit Profile
+    </div>
+    <div>
+		<form method="post">
+			<label for="your_email">Email: </label>
+			<input id="your_email" type="text" name="your_email" value="{{ current_email }}"> <br> <br>
+			<label for="your_name">Name: </label>
+			<input id="your_name" type="text" name="your_name" value="{{ current_name }}"> <br> <br>
+			<label for="your_identitas">Identitas: </label>
+			<input id="your_identitas" type="text" name="your_identitas" value="{{ current_identitas }}"> <br> <br>
+			<label for="your_address">Address: </label>
+			<input id="your_address" type="text" name="your_address" value="{{ current_address }}"> <br> <br>
+			<input type="submit" value="Save Profile">
+			<a href= "{% url 'profile' %}"> Cancel </a>
+		</form>
+	</div>
+{% else %}
+<div class="container">
+    <div class="heroText">
+        You are not logged in!
+    </div>
+    <div>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

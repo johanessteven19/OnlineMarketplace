@@ -1,0 +1,54 @@
+{% block content %}
+<center>
+	<div>
+		<div class="heroText">
+			My Wallet
+		</div>
+		<div class='topnav'>
+			<a href="{% url 'index' %}"> Home </a>.
+			<a href="{% url 'profile' %}"> Profile </a>
+			<a class='active' href="{% url 'ewallet' %}"> Wallet </a>
+			<a href="{% url 'mytransactions' %}"> Transactions </a>
+			<a href="{% url 'registervisitor' %}">Register Visitor</a>
+			<a href="{% url 'registerorganizer' %}">Register Organizer</a>
+			<a href="{% url 'logout' %}">Log Out</a>
+		</div>
+		<div>
+			<p> Name: {{ user.username }} </p> 
+			<p> Email: {{ user.email }} </p> <br>
+		</div>
+		<div>
+			<style type="text/css">
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-baqh{text-align:center;vertical-align:top}
+            </style>
+			<h1>Transaction Payment</h1>
+			<form action="/action_page.php">
+				<label for="Event">Choose Event:</label>
+				<select name="cars" id="cars">
+				  <option value="A">A</option>
+				  <option value="B">B</option>
+				  <option value="C">C</option>
+				  <option value="D">D</option>
+				</select>
+				<br>
+				<label for="Rating">Rating: </label>
+				<input type="text">
+				<br>
+				<label for="Photo">Photo: </label>
+				<input type="file" name="" id="">
+				<br>
+				<label for="Content">Content: </label>
+				<input type="text" name="" id="">
+				<br><br>
+				<input type="submit" value="Create Testimony">
+				<button>Cancel</button>
+			  </form>
+			  
+	</div>
+</center>
+{% endblock %}

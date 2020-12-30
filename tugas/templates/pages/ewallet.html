@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Wallet{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+<center>
+	<div>
+		<div class="heroText">
+			My Wallet
+		</div>
+		<div class='topnav'>
+			<a href="{% url 'index' %}"> Home </a>.
+			<a href="{% url 'profile' %}"> Profile </a>
+			<a class='active' href="{% url 'ewallet' %}"> Wallet </a>
+			<a href="{% url 'mytransactions' %}"> Transactions </a>
+			<a href="{% url 'registervisitor' %}">Register Visitor</a>
+			<a href="{% url 'registerorganizer' %}">Register Organizer</a>
+			<a href="{% url 'logout' %}">Log Out</a>
+		</div>
+		<div>
+			<p> Name: {{ user.username }} </p> 
+			<p> Email: {{ user.email }} </p> <br>
+		</div>
+		<div>
+			<style type="text/css">
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-baqh{text-align:center;vertical-align:top}
+			</style>
+			<table class="tg">
+			<thead>
+			  <tr>
+				<th class="tg-baqh">No</th>
+				<th class="tg-baqh">E-Wallet Name</th>
+				<th class="tg-baqh">Account No</th>
+				<th class="tg-baqh">Balance</th>
+				<th class="tg-baqh"><a href="{% url 'addewallet' %}"> Top Up Balance </a></th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td class="tg-baqh">1</td>
+				<td class="tg-baqh">OVO</td>
+				<td class="tg-baqh">080989999</td>
+				<td class="tg-baqh">10000000</td>
+				<td class="tg-baqh"><a href="{% url 'addewallet' %}"> Top Up </a></td>
+			  </tr>
+			  <tr>
+				<td class="tg-baqh">2</td>
+				<td class="tg-baqh">GO-PAY</td>
+				<td class="tg-baqh">45672321</td>
+				<td class="tg-baqh">300000<br></td>
+				<td class="tg-baqh"><a href="{% url 'addewallet' %}"> Top Up </a></td>
+			  </tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</center>
+{% else %}
+<div class="container">
+    <div class="heroText">
+        You are not logged in!
+    </div>
+    <div>
+        <a href="{% url 'index' %}"> HOME </a>.
+    </div>
+</div>
+{% endif %}
+{% endblock %}

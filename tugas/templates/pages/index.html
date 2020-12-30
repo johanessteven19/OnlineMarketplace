@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Event+{% endblock %}
+<!-- Start of page content -->
+
+
+<!-- Text landing -->
+{% block content %}
+{% if user.is_authenticated %}
+
+<center><div class="heroText"> Welcome to EVENT+ </div></center>
+<center><div>
+        <h2>Hello, {{ user.username }}.</h2>
+</div></center> <br>
+<div class="topnav">
+  <a class='active' href="{% url 'index' %}"> Home </a>
+  <a href="{% url 'profile' %}"> Profile </a>
+  <a href="{% url 'ewallet' %}"> Wallet </a>
+  <a href="{% url 'mytransactions' %}"> Transactions </a>
+  <a href="{% url 'registervisitor' %}">Register Visitor</a>
+  <a href="{% url 'registerorganizer' %}">Register Organizer</a>
+  <a href="{% url 'logout' %}">Log Out</a>
+
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button class="button button1">Search</button>
+    </form>
+  </div>
+</div>
+<br>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Event Theme</th>
+    <th>Event Name</th>
+    <th>Organizer</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Capacity</th>
+    <th>[Order Ticket]</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Fashion,art</td>
+    <td>Aerified</td>
+    <td>Holly Berry</td>
+    <td> Emmet,92576 Vernon Street,Gaoling</td>
+    <td>2019-12-23 sampai 2020-08-12
+</td>
+    <td>12:58 AM - 5:48 PM</td>
+    <td>150 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  </tr>
+ <tr>
+    <td>2</td>
+    <td>Technology,Education</td>
+    <td>Daltfresh</td>
+    <td>Dennis Burns</td>
+    <td>Calypso,224 Linden Crossing,Alajuela</td>
+    <td>2020-04-18 until 2020-02-02
+</td>
+    <td>5:45 PM	- 8:22 PM
+</td>
+    <td>150 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>3</td>
+    <td>Music Art</td>
+    <td>Subin</td>
+    <td>Igor Hunt </td>
+    <td>Mallory,68 Mifflin Avenue,Funtua</td>
+    <td>2020-04-18 until 2020-02-02
+</td>
+    <td>3:55 PM -1:14 AM</td>
+    <td>300 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>4</td>
+    <td>Music Art</td>
+    <td>Tres-Zap</td>
+    <td>Kiona Mcbride</td>
+    <td>Charing Cross	251 Forest Lane	Marechal Deodoro</td>
+    <td>2020-03-30 until 2020-10-26</td>
+    <td>3:55 PM -1:14 AM</td>
+    <td>300 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+ <tr>
+    <td>5</td>
+    <td>Technology, Education</td>
+    <td>Zoolab</td>
+    <td>Zia	Cruz</td>
+    <td>Charing Cross	251 Forest Lane	Marechal Deodoro</td>
+    <td>2020-07-14 until 2020-04-06</td>
+    <td>1:13 AM	- 4:37 PM</td>
+    <td>150 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>6</td>
+    <td>Food,Travel</td>
+    <td>Zontrax</td>
+    <td>Philip	Carver</td>
+    <td>Pine View,50 Kropf Court,Nantes</td>
+    <td>2020-02-29 until 2020-10-17</td>
+    <td>7:18 AM	- 8:26 PM</td>
+    <td>150 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>7</td>
+    <td>Food,Travel</td>
+    <td>Span</td>
+    <td>Lara Martin</td>
+    <td>Sunnyside	33509 Haas Drive	General Villegas</td>
+    <td>2020-07-23 until 2020-02-19</td>
+    <td>12:22 AM - 3:03 AM</td>
+    <td>150 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>8</td>
+    <td>Fashion,Art</td>
+    <td>Tres-Zap</td>
+    <td>Lara Martin</td>
+    <td>Green Ridge	, 5655 Alpine Parkway,Jinshi</td>
+    <td>2020-10-19 until 2019-12-13</td>
+    <td>3:01 PM	- 7:25 PM</td>
+    <td>300 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>9</td>
+    <td>Music,Art</td>
+    <td>Ronstring</td>
+    <td>Celeste	Cortez</td>
+    <td>Green Ridge	, 5655 Alpine Parkway,Jinshi</td>
+    <td>2020-01-31 until 2020-01-28</td>
+    <td>7:14 PM	- 7:49 AM</td>
+    <td>300 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+  <tr>
+    <td>10</td>
+    <td>Fashion,Music</td>
+    <td>Ronstring</td>
+    <td>Celeste	Cortez</td>
+    <td>Green Ridge	, 5655 Alpine Parkway,Jinshi</td>
+    <td>2020-03-22  until 2019-12-11</td>
+    <td>7:14 PM	- 7:49 AM</td>
+    <td>150 </td>
+    <td><a href="{% url 'registerevent' %}">BOOK</a></td>  </tr>
+</table>
+<br>
+<center><a href="#" class="previous">&laquo; Previous</a>
+<a href="#" class="previous">&laquo; Next</a></center>
+
+{% else %}
+<center><div class="heroText"> Welcome to EVENT+ </div></center>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="{% url 'login' %}">Log in</a>
+  <a href="{% url 'registervisitor' %}">Register Visitor</a>
+  <a href="{% url 'registerorganizer' %}">Register Organizer</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button class="button button1">Search</button>
+    </form>
+  </div>
+</div>
+<br>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Event Theme</th>
+    <th>Event Name</th>
+    <th>Organizer</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Capacity</th>
+    <th>[Order Ticket]</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Fashion,art</td>
+    <td>Aerified</td>
+    <td>Holly Berry</td>
+    <td> Emmet,92576 Vernon Street,Gaoling</td>
+    <td>2019-12-23 sampai 2020-08-12
+</td>
+    <td>12:58 AM - 5:48 PM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+ <tr>
+    <td>2</td>
+    <td>Technology,Education</td>
+    <td>Daltfresh</td>
+    <td>Dennis Burns</td>
+    <td>Calypso,224 Linden Crossing,Alajuela</td>
+    <td>2020-04-18 until 2020-02-02
+</td>
+    <td>5:45 PM	- 8:22 PM
+</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Music Art</td>
+    <td>Subin</td>
+    <td>Igor Hunt </td>
+    <td>Mallory,68 Mifflin Avenue,Funtua</td>
+    <td>2020-04-18 until 2020-02-02
+</td>
+    <td>3:55 PM -1:14 AM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Music Art</td>
+    <td>Tres-Zap</td>
+    <td>Kiona Mcbride</td>
+    <td>Charing Cross	251 Forest Lane	Marechal Deodoro</td>
+    <td>2020-03-30 until 2020-10-26</td>
+    <td>3:55 PM -1:14 AM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+ <tr>
+    <td>5</td>
+    <td>Technology, Education</td>
+    <td>Zoolab</td>
+    <td>Zia	Cruz</td>
+    <td>Pine View	50 Kropf Court	Nantes</td>
+    <td>2020-07-14 until 2020-04-06</td>
+    <td>1:13 AM	- 4:37 PM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Food,Travel</td>
+    <td>Zontrax</td>
+    <td>Philip	Carver</td>
+    <td>Sloan	4 Columbus Alley	Krasne</td>
+    <td>2020-02-29 until 2020-10-17</td>
+    <td>7:18 AM	- 8:26 PM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Food,Travel</td>
+    <td>Span</td>
+    <td>Lara Martin</td>
+    <td>Sunnyside	33509 Haas Drive	General Villegas</td>
+    <td>2020-07-23 until 2020-02-19</td>
+    <td>12:22 AM - 3:03 AM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Fashion,Art</td>
+    <td>Tres-Zap</td>
+    <td>Celeste	Cortez</td>
+    <td>Green Ridge	, 5655 Alpine Parkway,Jinshi</td>
+    <td>2020-10-19 until 2019-12-13</td>
+    <td>3:01 PM	- 7:25 PM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Music,Art</td>
+    <td>Ronstring</td>
+    <td>Quinlan	Floyd</td>
+    <td>Delladonna	70152 Redwing Road</td>
+    <td>2020-01-31 until 2020-01-28</td>
+    <td>7:14 PM	- 7:49 AM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Fashion,Music</td>
+    <td>Veribet</td>
+    <td>Jerry	Hensley</td>
+    <td>Bobwhite	9 Service Road	Margotuhu Kidul</td>
+    <td>2020-03-22  until 2019-12-11</td>
+    <td>7:14 PM	- 7:49 AM</td>
+    <td>0 </td>
+    <td><a href=#>BOOK</a></td>
+  </tr>
+</table>
+<br>
+<center><a href="#" class="previous">&laquo; Previous</a>
+<a href="#" class="previous">&laquo; Next</a></center>
+{% endif %}
+{% endblock %}
